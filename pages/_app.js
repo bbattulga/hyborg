@@ -5,7 +5,7 @@ import { Play } from '@next/font/google'
 import Loader from '@/components/Loader';
 const play = Play({ subsets: ['latin', 'cyrillic', 'cyrillic-ext'], weight: ['400', '700'] })
 export default function App({ Component, pageProps }) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const start = () => {
