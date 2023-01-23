@@ -32,7 +32,7 @@ export default function Footer() {
                         height='32'
                     />
                 </div>
-                <p className="text-[#BCBCBC] text-[12px] leading-4 mb-6 text-center">Бүтээгдэхүүний бүх хэсэг оюуны өмчөөр <br /> хамгаалагдсан. <br /><br /> ХАЙБОРГ ХХК ©2023 БҮХ ЭРХ ХУУЛИАР<br /> ХАМГААЛАГДСАН</p>
+                <p className="text-[#BCBCBC] text-[12px] leading-4 mb-10 text-center">Бүтээгдэхүүний бүх хэсэг оюуны өмчөөр <br /> хамгаалагдсан. <br /><br /> ХАЙБОРГ ХХК ©2023 БҮХ ЭРХ ХУУЛИАР<br /> ХАМГААЛАГДСАН</p>
             </div>
         </footer>
     )
