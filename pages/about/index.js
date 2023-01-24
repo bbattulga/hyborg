@@ -2,8 +2,36 @@ import Footer from '@/components/Footer'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 export default function About() {
+
+    const [disableSendBtn, setDisableSendBtn] = useState(true);
+    const [email, setEmail] = useState('');
+    const [emailErr, setEmailErr] = useState('');
+    const validEmail = new RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+    const validate = () => {
+        !validEmail.test(email) && email !== "" ? setEmailErr('Invalid email') : setEmailErr('')
+    }
+    const toggleDisable = () => {
+        validEmail.test(email) ? setDisableSendBtn(false) : setDisableSendBtn(true)
+    }
+    const onChangeEmail = (e) => {
+        setEmail(e.target.value)
+    }
+
+    const submitEmail = () => {
+        setTimeout(() => {
+            setEmail('');
+            console.log('hi')
+        }, 150);
+    }
+
+    useEffect(() => {
+        validate();
+        toggleDisable();
+    }, [email])
+
     return (
         <>
             <Head>
@@ -89,7 +117,7 @@ export default function About() {
                             </div>
                         </div>
                         <p className='text-[#AAAAAA] text-[14px] leading-4 mb-4'>Та эзэмшиж буй дээлээ өөрийн бие дээрээ өмсөхийн тулд AR технологийг ашиглах хэрэгтэй тул та Snapchat аппликэйшинийг татах шаардлагтай.</p>
-                        <Link href="/about"><button className='bg-[#CD5152] flex justify-center text-white gap-3 py-3 w-full rounded-2xl'>
+                        <Link href="/"><button className='bg-[#CD5152] flex justify-center text-white gap-3 py-3 w-full rounded-2xl'>
                             <Image
                                 src='/LucideIcon-1.png'
                                 width='24'
@@ -101,12 +129,25 @@ export default function About() {
                     <div className='w-full bg-[#1D1D1D] rounded-xl p-5 mb-4'>
                         <h1 className='text-white text-[24px] leading-7 font-bold mb-4'>Бүү хоцроорой!</h1>
                         <p className='text-[#AAAAAA] text-[14px] leading-4 mb-4'>Бидний шинэ бүтээгдэхүүнүүдийн мэдээллийг цаг алдалгүй авахыг хүсвэл имэйл хаягаа бидэнд үлдээгээрэй.</p>
-                        <form>
-                            <input className='border border-[#454545] rounded-2xl py-3 w-full px-4 bg-inherit mb-5 placeholder-[#3E3E3E]' placeholder='Имэйл хаяг' />
-                        </form>
-                        <button className='bg-[#CD5152] flex justify-center text-white gap-3 py-3 w-full rounded-2xl'>
-                            <span className='text-[16px]'>Илгээх</span>
-                        </button>
+                        <div>
+                            <input
+                                type='text'
+                                id='email'
+                                name='email'
+                                value={email}
+                                onChange={onChangeEmail}
+                                className={`text-white border rounded-2xl py-3 w-full px-4 bg-inherit placeholder-[#3E3E3E] ${!validEmail.test(email) && email !== '' ?
+                                    'border-red-400' : 'border-[#454545]'
+                                    }
+                                `}
+                                placeholder='Имэйл хаяг' />
+                            <div className='text-red-400 mt-1'>{emailErr}</div>
+                            <button onClick={!disableSendBtn ? submitEmail : null} type='submit' className={`flex justify-center text-white mt-5 gap-3 py-3 w-full duration-150 rounded-2xl ${disableSendBtn
+                                ? 'bg-[#CD5152]/30' : 'bg-[#CD5152] active:scale-95'
+                                }`}>
+                                <span className='text-[16px]'>Илгээх</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <Footer />
