@@ -20,11 +20,24 @@ export default function About() {
         setEmail(e.target.value)
     }
 
-    const submitEmail = () => {
-        setTimeout(() => {
-            setEmail('');
-            console.log('hi')
-        }, 150);
+    const submitEmail = async (e) => {
+        e.preventDefault();
+        const form = {
+            email,
+        }
+
+        const response = await fetch('../api/submit', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(form)
+        })
+
+        const content = await response.json();
+
+        setEmail('');
     }
 
     useEffect(() => {
