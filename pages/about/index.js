@@ -22,6 +22,11 @@ export default function About() {
 
     const submitEmail = async (e) => {
         e.preventDefault();
+
+        setTimeout(() => {
+            setEmail('');
+        }, 150);
+
         const form = {
             email,
         }
@@ -37,7 +42,6 @@ export default function About() {
 
         const content = await response.json();
 
-        setEmail('');
     }
 
     useEffect(() => {
