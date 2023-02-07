@@ -1,4 +1,5 @@
 import Footer from '@/components/Footer'
+import Footer2 from '@/components/Footer2'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -152,7 +153,7 @@ export default function About() {
                             <div className='lg:grid grid-cols-3 gap-10'>
                                 <div></div>
                                 <div></div>
-                                <div className='max-w-[500px] bg-[#1D1D1D] rounded-xl p-5 mb-4 lg:mt-6'>
+                                <div className='max-w-[500px] bg-[#1D1D1D] rounded-xl p-5 mb-4 lg:mt-6 lg:hidden'>
                                     <h1 className='text-white text-[24px] leading-7 font-bold mb-4'>Бүү хоцроорой!</h1>
                                     <p className='text-[#AAAAAA] text-[14px] leading-4 mb-4'>Бидний шинэ бүтээгдэхүүнүүдийн мэдээллийг цаг алдалгүй авахыг хүсвэл имэйл хаягаа бидэнд үлдээгээрэй.</p>
                                     <div>
@@ -180,6 +181,7 @@ export default function About() {
                     </div>
                 </div>
                 <Footer />
+                <Footer2 />
             </main>
         </>
     )

@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Footer() {
     return (
-        <footer>
+        <footer className="block lg:hidden">
             <div className="w-full bg-[#1D1D1D] flex flex-col items-center px-6 font-nunito"><Image
                 className="mt-11 mb-10"
                 src='/logo-main.png'
