@@ -1,8 +1,6 @@
 import Footer from '@/components/Footer'
 import Footer2 from '@/components/Footer2'
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
 
 export default function About() {
@@ -63,98 +61,67 @@ export default function About() {
                     <div className='container mx-auto'>
                         <div className='flex flex-col items-center lg:items-start px-6 pb-7'>
                             <div className='mt-[60px] mb-6'>
-                                <Image
-                                    src='/logo.png'
-                                    width='125'
-                                    height='35'
-                                />
+                                <img src={"./Logo.svg"} />
                             </div>
                             <div className='px-3 mb-5 lg:mb-10 max-w-[500px] lg:max-w-full'>
-                                <h1 className='text-white text-[24px] leading-7 font-bold mb-5 lg:text-4xl'>Амар байна уу?</h1>
-                                <h2 className='text-[#AAAAAA] text-[14px] leading-4 lg:text-lg'>Та Монголын анхны виртуал дээлийн эзэмшигч боллоо. Монгол өв соёлоо шинэчлэн хадгалж үлдсэн таньд баярлалаа.</h2>
+                                <h1 className='text-white text-[24px] leading-7 font-bold mb-5 lg:text-4xl'>Hello</h1>
+                                <h2 className='text-[#AAAAAA] text-[14px] leading-4 lg:text-lg'>HybOrg is sustainable hybrid fashion brand. This product will be our MVP version.</h2>
                             </div>
                             <div className='lg:grid grid-cols-3 gap-10'>
                                 <div>
                                     <div className='relative max-w-[500px]'>
-                                        <Image
-                                            src='/Rectangle-3612.png'
-                                            width='600'
-                                            height='600'
-                                        />
+                                        <img className='w-full' src={"./HybridVest.svg"} />
                                         <div className='flex gap-2 absolute top-3 left-3 pl-1 py-1 pr-3 rounded-full justify-center items-center bg-white/5'>
-                                            <Image
-                                                src='/logo-white.png'
-                                                width='30'
-                                                height='30'
-                                            />
-                                            <h1 className='text-[16px] font-bold text-white uppercase'>mongol uuj 1</h1>
+                                            <img src={"./Logobnw.svg"} />
+                                            <h1 className='text-[16px] font-bold text-white uppercase'>Hybrid Vest</h1>
                                         </div>
                                         <div className='absolute top-3 right-5 p-2 bg-white/5 rounded-lg'>
-                                            <Image
-                                                src='/LucideIcon-2.png'
-                                                width='24'
-                                                height='24'
-                                            />
+                                            <img src={"./LucideIcon.svg"} />
                                         </div>
                                     </div>
                                     <div className='max-w-[500px] bg-[#1D1D1D] rounded-b-xl p-5 mb-4'>
                                         <p className='text-[#AAAAAA] text-[14px] leading-4'>
-                                            Биет дээлтэй хослуулан эдлэх гоёлын зориулалттай ууж. Зөв талдаа зөрсөн захтай, наран хормой, хөндлөн ширээстэй бүсэлхий болон гоёлын бүснээс бүтсэн, мөнгөлөг чимэглэл бүхий энгэртэй ууж.
+                                            Hybrid fashion is sustainable yet trendy. By owning only one HybOrg clothes, people can express themselves with limitless zero-waste hybrid looks across real and digital worlds.
                                             <br /><br />
-                                            Нүүдэлчин түмэн дээлийг хүндэтгэн дээдлэх болсон шалтгаан нь мөнх өвлийг давахад нөмөр нөөлөг болж, ертөнцийн хахир хатууд оюун санааны хүч өгч байсныг билэгдэн хадгалсаар ирсэн. Дээл нь уушги, зүрх, элэг гэх эрүүл мэндийн дотоод эрхтнийг хамгаалагчийн хувьд хэм хэмжээ хязгаар, цадах, нөөлөгдөх, хайрлах гэх утгыг илтгэх билэгддэг хувцас болон хөгжжээ. Иймээс дээлийн зах, өврийг эрх мэдлийн, хормойг хайр энэрлийн, ханцуй ур ухааны билэг тэмдэг хэмээн хэсэгчлэн ёсчлох болсон. Бид дээлийг бэлгэд авбал эн тэнцүү хайрлалцах, түших, нөмөрлөх утга агуулсан бэлэг хэмээн хүндэтгэдэг.
+                                            ・Get your unique upcycled garment<br />
+                                            ・Style yourself with its AR counterparts<br />
+                                            ・Express yourself across real and digital worlds without waste!<br />
+                                            ・Wear them longer without get bored
                                         </p>
                                     </div>
                                 </div>
                                 <div className='max-w-[500px] bg-[#1D1D1D] rounded-xl p-5 mb-4'>
-                                    <h1 className='text-white text-[24px] leading-7 font-bold mb-4'>Хаана ч хамт явах виртуал өмч</h1>
+                                    <h1 className='text-white text-[24px] leading-7 font-bold mb-4'>HybOrg NFC Chip</h1>
                                     <div className='relative w-full mb-4'>
-                                        <Image
-                                            src='/Rectangle-3621.png'
-                                            width='600'
-                                            height='600'
-                                        />
-                                        <div className='absolute bottom-3 left-3'>
-                                            <Image
-                                                src='/logo-gray.png'
-                                                width='58'
-                                                height='58'
-                                            />
+                                        <img className='w-full' src={"./NfcBg.svg"} />
+                                        <div className='absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]' >
+                                            <img src={"./NfcChip.svg"} />
                                         </div>
                                     </div>
-                                    <p className='text-[#AAAAAA] text-[14px] leading-4'>Та уг бүтээгдэхүүнийг зөвхөн Hyborg tag-н ашиглан өмсөх боломжтой. Уг tag-н тусгай код хадгалж байгаа тул та хүчтэй нугалж гэмтээхгүй байх хэрэгтэй.</p>
+                                    <p className='text-[#AAAAAA] text-[14px] leading-4'>Монгол уужыг та зөвхөн Hyborg tag ашиглан өмсөх боломжтой. Уг tag-н тусгай код хадгалж байгаа тул та нугалж гэмтээхгүй, бахархалтайгаар хадгалж яваарай.</p>
                                 </div>
                                 <div className='max-w-[500px] bg-[#1D1D1D] rounded-xl p-5 mb-4'>
-                                    <h1 className='text-white text-[24px] leading-7 font-bold mb-4'>Дээлээрээ хэрхэн гангарах вэ?</h1>
+                                    <h1 className='text-white text-[24px] leading-7 font-bold mb-4'>Virtual Wearable
+                                        <br /><span className='text-[#CD5152]'>Bio expression</span></h1>
                                     <div className='relative w-full mb-4'>
-                                        <Image
-                                            src='/Rectangle-3619.png'
-                                            width='600'
-                                            height='600'
-                                        />
+                                        <img className='w-full' src={"./Wearable.svg"} />
                                         <div className='absolute bottom-3 left-3'>
-                                            <Image
-                                                src='/Ellipse-2.png'
-                                                width='56'
-                                                height='56'
-                                            />
+                                            <img src={"./SnapChat.svg"} />
                                         </div>
                                     </div>
-                                    <p className='text-[#AAAAAA] text-[14px] leading-4 mb-4'>Та эзэмшиж буй дээлээ өөрийн бие дээрээ өмсөхийн тулд AR технологийг ашиглах хэрэгтэй тул та Snapchat аппликэйшинийг татах шаардлагтай.</p>
-                                    <Link href="/"><button className='bg-[#CD5152] flex justify-center text-white gap-3 py-3 w-full rounded-2xl'>
-                                        <Image
-                                            src='/LucideIcon-1.png'
-                                            width='24'
-                                            height='24'
-                                        /><span className='text-[16px]'>Дээл өмсөх</span>
+                                    <p className='text-[#AAAAAA] text-[14px] leading-4 mb-4'>Та эзэмшиж буй виртуал хувцасаа өөрийн бие дээрээ өмсөхийн тулд AR технологийг ашиглах хэрэгтэй тул та Snapchat аппликэйшинийг татаарай.</p>
+                                    <a target='_blank' href="https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=c0c61b978a7940ec88b9d97e73daac21&metadata=01"><button className='bg-[#CD5152] flex justify-center text-white gap-3 py-3 w-full rounded-2xl'>
+                                        <img src={"./LucideIcon2.svg"} />
+                                        <span className='text-[16px]'>Let's Hybrid Look</span>
                                     </button>
-                                    </Link>
+                                    </a>
                                 </div>
                             </div>
                             <div className='lg:grid grid-cols-3 gap-10'>
                                 <div></div>
                                 <div></div>
                                 <div className='max-w-[500px] bg-[#1D1D1D] rounded-xl p-5 mb-4 lg:mt-6 lg:hidden'>
-                                    <h1 className='text-white text-[24px] leading-7 font-bold mb-4'>Бүү хоцроорой!</h1>
+                                    <h1 className='text-white text-[24px] leading-7 font-bold mb-4'>New Product <br />Waitlist coming soon</h1>
                                     <p className='text-[#AAAAAA] text-[14px] leading-4 mb-4'>Бидний шинэ бүтээгдэхүүнүүдийн мэдээллийг цаг алдалгүй авахыг хүсвэл имэйл хаягаа бидэнд үлдээгээрэй.</p>
                                     <div>
                                         <input
